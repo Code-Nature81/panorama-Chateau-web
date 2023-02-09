@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.css"> 
+<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="bootstrap-3.2.0-dist/js/jquery-1.10.2.js"></script> 
+<script src="bootstrap-3.2.0-dist/js/bootstrap.js"></script> 
+
+
+
+<script type="text/javascript"> 
+    $(document).ready(function()
+    { 
+    
+        $("#infob1-html").popover(
+        { 
+          html    : true, 
+          content : '<p><img src="https://idata.over-blog.com/0/23/09/69/chateau/11-30-34-48/11/blanchefort/blanchefort-03.jpg" class="pull"/><br><br>Elle nest pas facile à trouver cette ruine. Si vous ne connaissez pas son existence ou si vous navez pas une carte précise, vous passerez devant sans lever la tête.Le site médiéval est sur un pic, sur la route entre Rennes les Bains, en direction de Peyrepertuse. Plus exactement au Sud-Est de Cassaignes, sur la butte proche du hameau de Pachevan.Cette "beauté de pierres" est dans le "triangle des châteaux Cathare"</p><p><a href="https://chateauruine.fr/article-2386837.html" class="btn btn-danger">ICI: Historique</a></p>', 
+          title   : '<p><strong>Blanchefort</strong></p>' 
+        });
+    
+    
+        /**
+         * init de l'infobulle complexe BootStrap 3
+         * passage de la souris au dessus d'un lien infobulle
+         * @return {[type]} [description]
+         */
+        $("a.infobulle1-complexe").mouseover(function()
+        {  
+            $(this).popover("show");// pour afficher une infobulle complexe
+        }); 
+    
+    
+    
+    }); 
+
+    
+    </script>
+    <style>
+        /*data-placement="bottom" ----- dans le body pour mettre popover sous le nom de la ville*/
+        .esp{
+    width: 35px; margin-left:30px ;
+}
+
+        .ang{
+    width: 35px; margin-left:30px ; 
+}
+
+        .pull{
+            width: 210px;
+            margin-left: 17px;
+            
+        }
+
+        .popover{
+            position:absolute;
+            z-index: 10;
+        }
+
+        .img1{
+            height: 500px;
+        }
+
+        #infob1-html{
+            width: 212px;
+            position: absolute;
+            z-index: 20;
+            margin-top: -350px;
+            font-size: 30px;
+            margin-left: 270px;
+        }
+
+        
+
+        
+        
+
+
+
+    </style>
+    </head>
+<body>
+    <header>
+        <a href="https://codenature.fr/"><img src="Projet111.png" style="width: 60px; margin-left:5px ;"></a>
+        <a href="https://www.chateau-coustaussa.fr/"><img src="logo_chateau_av_texte.png" style="width: 150px; margin-left:5px ;"></a>
+        <a href="ang.html"><img class="ang" src="united-kingdom.png"></a>
+        <a href="espagnol.html"><img class="esp" src="espagne.png"></a>
+    
+    </header>
+
+    
+        <img class="img1" src="panorama-chateau-gim10.jpg" alt="">
+
+    <div class="container">
+        <p><a href="#" id="infob1-html" class="infobulle-complexe1" data-toggle="popover" role="button">Blanchefort<img src="Logo_monument_historique.svg" style="width: 40px;margin-left: 5px;"></a></p>
+    </div>
+
+</body>
+</html>
